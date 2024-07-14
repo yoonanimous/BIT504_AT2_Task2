@@ -37,10 +37,8 @@ public class GameMain extends JPanel implements MouseListener{
 
 	/** Constructor to setup the UI and game components on the panel */
 	public GameMain() {   
-		
-		// TODO: This JPanel fires a MouseEvent on MouseClicked so add required event listener to 'this'.          
-	    
-	    
+        addMouseListener(this);
+
 		// Setup the status bar (JLabel) to display status message       
 		statusBar = new JLabel("         ");       
 		statusBar.setFont(new Font(Font.DIALOG_INPUT, Font.BOLD, 14));       
@@ -54,12 +52,9 @@ public class GameMain extends JPanel implements MouseListener{
 		// account for statusBar height in overall height
 		setPreferredSize(new Dimension(CANVAS_WIDTH, CANVAS_HEIGHT + 30));
 		
-		
-		// TODO: Create a new instance of the game "Board"class. HINT check the variables above for the correct name
+        board = new Board();
 
-		
-		//TODO: call the method to initialise the game board
-
+        initGame();
 	}
 	
 	public static void main(String[] args) {
