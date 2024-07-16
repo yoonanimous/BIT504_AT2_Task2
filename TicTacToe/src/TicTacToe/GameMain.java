@@ -162,7 +162,7 @@ public class GameMain extends JPanel implements MouseListener{
 			// game over and restart              
 			initGame();            
 		}   
-		repaint();          
+		repaint(); 
 	}
 		
 	
